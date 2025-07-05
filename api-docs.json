@@ -16168,7 +16168,7 @@
                     "wardName": {
                         "type": "string",
                         "description": "사용자 위치 기반 동/읍/면/리",
-                        "example": "문래동3가"
+                        "example": "문래동"
                     }
                 }
             },
@@ -17593,16 +17593,16 @@
                     "sort": {
                         "$ref": "#/components/schemas/SortObject"
                     },
-                    "paged": {
-                        "type": "boolean"
+                    "pageSize": {
+                        "type": "integer",
+                        "format": "int32"
                     },
                     "pageNumber": {
                         "type": "integer",
                         "format": "int32"
                     },
-                    "pageSize": {
-                        "type": "integer",
-                        "format": "int32"
+                    "paged": {
+                        "type": "boolean"
                     },
                     "unpaged": {
                         "type": "boolean"
@@ -18292,7 +18292,9 @@
                 "properties": {
                     "missionId": {
                         "type": "integer",
-                        "format": "int64"
+                        "format": "int64",
+                        "description": "미션 식별자",
+                        "example": 3
                     },
                     "title": {
                         "type": "string",
@@ -18363,6 +18365,12 @@
                 "type": "object",
                 "description": "미션 상세 조회 응답 DTO",
                 "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "미션 식별자",
+                        "example": 5
+                    },
                     "title": {
                         "type": "string",
                         "description": "미션 제목",
